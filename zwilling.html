@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rei da Cutelaria</title>
+    <link rel="stylesheet" href="css/comprar.css">
+    <script src="javascript/zwilling.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <section class="produto">
+        <div class="img-produto">
+            <div class="img-opcoes">
+                <div class="foto1" onclick="clicar1()">
+                    <img src="imagens/34892-173_2.jpg" alt="">
+                </div>
+                <div class="foto2" onclick="clicar2()">
+                    <img src="imagens/34892-173_3.jpg" alt="">
+                </div>
+                <div class="foto3" onclick="clicar3()">
+                    <img src="imagens/34892-173_4.jpg" alt="">
+                </div>
+            </div>
+            <div class="img-principal">
+                <img src="imagens/34892-173.jpg" alt="">
+            </div>
+        </div>
+        <div class="descricao">
+            <!-- <p><em>Categoria do produto</em></p> -->
+            <h2>Faca Nakiri Bob Kramer Euro Stainless 6,5" - <em>Zwilling</em></h2>
+            <p style="color: rgb(173, 170, 170);">Código do produto: 34892/173</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, deserunt corrupti architecto necessitatibus accusamus molestias adipisci, dolore eaque vitae ut, corporis rem dicta ratione repellendus dolores nobis? Facilis, illo minus?</p>
+            <!-- <p>R$ 6.499,00</p> -->
+
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <div class="form">
+
+                    <div>
+                       <p>Escolha o modelo do produto</p>
+                        <select id="select">
+                            <option value="preto">Cabo preto</option>
+                            <option value="branco">Cabo Branco</option>
+                            <option value="azul">Cabo Azul</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="">Nome:</label> <br>
+                        <input  type="text" name="name" placeholder="Nome completo" autocomplete="off" required class="nome">
+                    </div>
+
+                    <div>
+                        <label for="">Quantidade:</label> <br>
+                        <input type="number" name="number" placeholder="10" autocomplete="off" required class="quantidade">
+                    </div>
+
+                    <div>
+                        <label for="">email:</label> <br>
+                        <input type="text" name="email" placeholder="Digite seu email" autocomplete="off" required class="email">
+                    </div>
+
+                    <div>
+                        <p>Informações adicionais</p>
+                        <textarea name="message" cols="35" rows="8" placeholder="Quero Gravar meu nome na faca" required class="mensagem"></textarea> <br>
+                        <button type="submit" onclick="envioEmail()">Enviar</button>
+                        <a href="" onclick="enviar()">Whatsapp</a>
+                    </div>
+
+                    <input type="hidden" name="accessKey" value="cefada46-224f-4bd2-9a98-5a5cca742571">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+       function enviar(){
+
+        var numeroVendedor = "+5511961805535";
+        var seletc = document.querySelector('#select');
+        var nome = document.querySelector('.nome').value
+        var quantidade = document.querySelector('.quantidade').value;
+        var mensagem = document.querySelector('.mensagem').value;
+
+        var url = "https://wa.me/" + numeroVendedor + "?text="
+        + "Produto : " +select.value+ "%0a"
+        + "Nome : " +nome+ "%0a"
+        + "Quantidade : " +quantidade+ "%0a"
+        + "Personalizar : " +mensagem+ "%0a%0a";
+
+        window.open(url, '_blanK').focus()
+    }
+
+    function envioEmail(){
+        window.alert('Agradecemos pelo envio. Em breve retornaremos o email')
+        var url = "http://127.0.0.1:5500/index.html";
+
+         window.open(url, '_blanK').focus()
+    }
+
+    // let seletc = document.querySelector('#select');
+    // console.log(select);
+
+    // function obrigado(){
+    //     var url = "http://127.0.0.1:5500/index.html";
+
+    //      window.open(url, '_blanK').focus()
+    // }
+
+     </script>
+</body>
+</html>

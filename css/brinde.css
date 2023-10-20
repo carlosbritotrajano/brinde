@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    max-width: 100%
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.info > div {
+    position: relative;
+    flex: 1 1 200px;
+    margin: 20px 20px;
+    padding: 10px;
+    background-color: rgb(247, 243, 243);
+}
+
+.info > div > h2{
+    position: absolute;
+    left: 6%;
+    top: 0;
+    padding-left: 80px;
+}
+
+.info > div > p{
+    position: absolute;
+    left: 6%;
+    top: 38%;
+    padding-left: 80px;
+}
+
+/* Personalização */
+
+.personalizacao{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pd1{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.pd1 > div{
+    flex: 1 1 50px;
+}
+
+.pd1 > div > h2{
+    padding: 15px 0px;
+}
+
+.pd1 > div > p{
+    line-height: 1.5;
+    font-size: 1.1em;
+}
+
+.pd1 > div > a > button{
+    padding: 10px 15px;
+    margin: 30px 10px 10px 0px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.pd1 > div > a > button{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn1{
+    background-color: blue;
+    color: white;
+}
+
+.btn2{
+    background-color: green;
+}
+
+
+
+@media(max-width: 1040px){
+    .info > div {
+        flex: 1 1 400px;
+    }
+
+    .personalizacao{
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .pd1 > div{
+        flex: 1 1 500px;
+        margin: 10px;
+    }
+}
+
+@media(max-width: 300px){
+
+    .info > div {
+        text-align: center;
+    }
+
+    .info > div > h2{
+        position: static;
+        left: 0;
+        top: 0;
+        padding-left: 0px;
+    }
+    
+    .info > div > p{
+        position: static;
+        left: 0;
+        top: 0;
+        padding-left: 0px;
+    }
+
+}
